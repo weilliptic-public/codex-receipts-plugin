@@ -1,0 +1,61 @@
+{
+    "hooks": {
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${PLUGIN_ROOT}/bin/codex-session-start-hook $WEILLIPTIC_ACCOUNT_FILE",
+                        "timeout": 30
+                    }
+                ]
+            }
+        ],
+        "UserPromptSubmit": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${PLUGIN_ROOT}/bin/codex-user-prompt-submit-hook"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "^(Bash|apply_patch)$",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${PLUGIN_ROOT}/bin/codex-pretooluse-hook $WEILLIPTIC_ACCOUNT_FILE",
+                        "timeout": 30,
+                        "statusMessage": "Checking token balance"
+                    }
+                ]
+            }
+        ],
+        "PostToolUse": [
+            {
+                "matcher": "^(Bash|apply_patch)$",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${PLUGIN_ROOT}/bin/codex-audit-hook $WEILLIPTIC_ACCOUNT_FILE",
+                        "timeout": 120,
+                        "statusMessage": "Recording AI provenance receipt"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${PLUGIN_ROOT}/bin/codex-stop-hook $WEILLIPTIC_ACCOUNT_FILE"
+                    }
+                ]
+            }
+        ]
+    }
+}

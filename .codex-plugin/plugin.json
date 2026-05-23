@@ -1,0 +1,21 @@
+{
+  "name": "weilliptic-receipts",
+  "version": "0.3.0",
+  "description": "Audit AI code changes on Weilchain. Records every file edit as a blockchain receipt, viewable on the block explorer.",
+  "author": {
+    "name": "Weilliptic"
+  },
+  "homepage": "https://marauder.weilliptic.ai/dashboard",
+  "repository": "https://github.com/weilliptic-public/codex-receipts-plugin",
+  "keywords": ["audit", "weilchain", "receipts", "ai-provenance"],
+  "hooks": "./hooks/hooks.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Weilliptic Receipts",
+    "shortDescription": "Audit AI code changes on Weilchain. Records every file edit as a blockchain receipt.",
+    "developerName": "Weilliptic",
+    "category": "Security",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://weilliptic.ai"
+  }
+}
