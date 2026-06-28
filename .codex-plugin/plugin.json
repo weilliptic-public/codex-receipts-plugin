@@ -1,6 +1,6 @@
 {
   "name": "weilliptic-receipts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Audit AI code changes on Weilchain. Records every file edit as a blockchain receipt, viewable on the block explorer.",
   "author": {
     "name": "Weilliptic"
