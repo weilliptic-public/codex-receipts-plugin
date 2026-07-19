@@ -73,6 +73,13 @@ done
 mkdir -p "$PLUGIN_DIR/hooks"
 cp "$SOURCE_DIR/hooks/hooks.json" "$PLUGIN_DIR/hooks/"
 
+# Copy plugin manifest so consumers can introspect the installed version
+# (`grep version ~/.codex/plugins/weilliptic-receipts/.codex-plugin/plugin.json`)
+if [ -f "$SOURCE_DIR/.codex-plugin/plugin.json" ]; then
+    mkdir -p "$PLUGIN_DIR/.codex-plugin"
+    cp "$SOURCE_DIR/.codex-plugin/plugin.json" "$PLUGIN_DIR/.codex-plugin/"
+fi
+
 # Copy skills
 if [ -d "$SOURCE_DIR/skills" ]; then
     cp -R "$SOURCE_DIR/skills" "$PLUGIN_DIR/"
