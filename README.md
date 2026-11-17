@@ -1,6 +1,6 @@
 # Weilliptic Receipts — Codex Plugin
 
-AI code provenance on [WeilChain](https://marauder.weilliptic.ai/dashboard). Every AI-generated code change is cryptographically receipted and persisted on-chain for audit, compliance, and knowledge reuse.
+AI code provenance on [WeilChain](https://console.weilliptic.ai/dashboard). Every AI-generated code change is cryptographically receipted and persisted on-chain for audit, compliance, and knowledge reuse.
 
 ## Install
 
@@ -39,7 +39,7 @@ Every time Codex writes or edits a file:
 
 ## Viewing Receipts
 
-Open the [Weilliptic block explorer](https://marauder.weilliptic.ai/dashboard) or the [Codensics](https://codensics.weilliptic.ai) dashboard to view receipted changes, session transcripts, and similar prompts.
+Open the [Weilliptic block explorer](https://console.weilliptic.ai/dashboard) or the [Codensics](https://codensics.weilliptic.ai) dashboard to view receipted changes, session transcripts, and similar prompts.
 
 ## Hooks
 
